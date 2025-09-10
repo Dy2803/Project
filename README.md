@@ -131,8 +131,10 @@
  Dựa trên các kết quả mô phỏng, phương pháp **FlowSense** cho thấy hiệu quả vượt trội:
 
 * **Độ chính xác cao**: Biểu đồ so sánh cho thấy FlowSense tái tạo lại mức sử dụng băng thông của mạng một cách rất gần với phương pháp Polling.
+  ![Biểu đồ so sánh FlowSense vs Polling](Pictures/sosanh.pdf)
 
 * **Không tạo overhead**: FlowSense không cần gửi thêm các yêu cầu Polling, giúp giảm thiểu đáng kể lưu lượng điều khiển.
+* 
 * **Phản ứng nhanh**: Kết quả đánh giá granularity chứng minh FlowSense có thể cập nhật thông tin băng thông chỉ trong vài giây sau khi một luồng kết thúc, phù hợp cho các hệ thống giám sát gần thời gian thực.
 
 
