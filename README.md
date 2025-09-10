@@ -65,36 +65,36 @@
  1.  **Chạy Polling**:
      * Mở Terminal thứ nhất và chạy Ryu Controller ở chế độ Polling:
          ```bash
-         ryu-manager Polling_CollectLogs.py
+          sudo ryu-manager Polling_CollectLogs.py
          ```
      * Mở Terminal thứ hai và chạy mô hình mạng với Mininet:
          ```bash
-         sudo python TOPOLOGY.py
+         sudo python3 TOPOLOGY.py
          ```
      * Sau khi mô phỏng hoàn tất, file `polling_raw.csv` sẽ được tạo. Chạy script phân tích để tạo file `polling_analyzed.csv`:
          ```bash
-         python Draw_Polling_CollectLogs.py
+         python3 Draw_Polling_CollectLogs.py
          ```
 
  2.  **Chạy FlowSense**:
      * Đóng Mininet và Ryu ở bước trên.
      * Mở Terminal thứ nhất và chạy Ryu Controller ở chế độ FlowSense:
          ```bash
-         ryu-manager FlowSense_CollectLogs.py
+        sudo ryu-manager FlowSense_CollectLogs.py
          ```
      * Mở Terminal thứ hai và chạy lại mô hình mạng:
          ```bash
-         sudo python TOPOLOGY.py
+         sudo python3 TOPOLOGY.py
          ```
      * Sau khi mô phỏng hoàn tất, file `flowsense_events.csv` sẽ được tạo. Chạy script phân tích để tạo file `a1_algorithm1_correct_final.csv`:
          ```bash
-         python "FLOWSENSE(Algorithm1).py"
+         python3 "FLOWSENSE(Algorithm1).py"
          ```
 
  3.  **So sánh kết quả**:
      * Chạy script so sánh để tạo biểu đồ tổng hợp:
          ```bash
-         python Comparison.py
+         python3 Comparison.py
          ```
      * Một cửa sổ đồ thị sẽ hiển thị, so sánh mức sử dụng băng thông giữa hai phương pháp.
 
@@ -106,22 +106,22 @@
 
 * **Lưu ý**: Trước khi chạy, hãy mở file `FlowSense_CollectLogs.py` và thay đổi tên file log thành `granularity_events.csv`.
      ```bash
-     ryu-manager FlowSense_CollectLogs.py
+      sudo ryu-manager FlowSense_CollectLogs.py
      ```
 
  2.  Mở Terminal thứ hai và chạy mô hình mạng `GranularityTopo`:
      ```bash
-     sudo python GranularityTopo.py
+     sudo python3 GranularityTopo.py
      ```
 
  3.  Sau khi mô phỏng hoàn tất, chạy các script phân tích sau để xem kết quả:
      * Để vẽ biểu đồ phân phối độ trễ:
          ```bash
-         python granularity_left.py
+         python3 granularity_left.py
          ```
      * Để vẽ biểu đồ tỷ lệ dữ liệu được báo cáo:
          ```bash
-         python granularity_right.py
+         python3 granularity_right.py
          ```
 
 
