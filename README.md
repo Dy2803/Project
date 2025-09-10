@@ -1,30 +1,33 @@
-#
-# # FlowSense: Hệ thống giám sát mạng thụ động dựa trên thông tin điều khiển trong SDN
-#
-#
-# ## 1. Giới thiệu dự án 💡
-#
-# Đồ án này tập trung vào việc hiện thực và đánh giá **FlowSense** - một phương pháp giám sát mạng thụ động. Dự án giải quyết một thách thức quan trọng trong mạng lập trình phần mềm (SDN): làm thế nào để đo lường mức sử dụng băng thông một cách **chính xác** và **hiệu quả** mà không cần tốn thêm tài nguyên mạng.
-#
-# Thay vì dựa vào các phương pháp giám sát chủ động như **Polling**, FlowSense tận dụng các thông điệp có sẵn trong mạng như `PacketIn` và `FlowRemoved`. Điều này cho phép hệ thống thu thập thông tin lưu lượng mà **không tạo ra overhead** cho luồng điều khiển.
-#
-# Dự án được xây dựng trên môi trường mô phỏng **Mininet** và sử dụng **Ryu Controller** để triển khai logic giám sát.
-#
-#
+
+ # FlowSense: Hệ thống giám sát mạng thụ động dựa trên thông tin điều khiển trong SDN
+
+
+ ## 1. Giới thiệu dự án 💡
+
+ Đồ án này tập trung vào việc hiện thực và đánh giá **FlowSense** - một phương pháp giám sát mạng thụ động. Dự án giải quyết một thách thức quan trọng trong mạng lập trình phần mềm (SDN): làm thế nào để đo lường mức sử dụng băng thông một cách **chính xác** và **hiệu quả** mà không cần tốn thêm tài nguyên mạng.
+
+ Thay vì dựa vào các phương pháp giám sát chủ động như **Polling**, FlowSense tận dụng các thông điệp có sẵn trong mạng như `PacketIn` và `FlowRemoved`. Điều này cho phép hệ thống thu thập thông tin lưu lượng mà **không tạo ra overhead** cho luồng điều khiển.
+
+ Dự án được xây dựng trên môi trường mô phỏng **Mininet** và sử dụng **Ryu Controller** để triển khai logic giám sát.
+
+
 # ---
-#
-#
-# ## 2. Công nghệ sử dụng 🛠️
-#
-# Dự án sử dụng các công nghệ chính sau:
-#
-# * **Mininet**: Một công cụ mô phỏng mạng ảo, cho phép tạo ra các topology mạng phức tạp trên một máy tính duy nhất.
-# * **Ryu Controller**: Một framework SDN mã nguồn mở, hỗ trợ giao thức OpenFlow và được viết bằng Python.
-# * **Python 3**: Ngôn ngữ lập trình chính.
-# * **OpenFlow 1.3**: Giao thức giao tiếp chuẩn giữa Ryu Controller và các switch ảo.
-# * **Matplotlib & Pandas**: Các thư viện Python dùng để xử lý, phân tích dữ liệu và trực quan hóa kết quả (vẽ biểu đồ).
-#
-#
+
+ ## 2. Công nghệ sử dụng 🛠️
+
+ Dự án sử dụng các công nghệ chính sau:
+
+ * **Mininet**: Một công cụ mô phỏng mạng ảo, cho phép tạo ra các topology mạng phức tạp trên một máy tính duy nhất.
+
+ * **Ryu Controller**: Một framework SDN mã nguồn mở, hỗ trợ giao thức OpenFlow và được viết bằng Python.
+ 
+ * **Python 3**: Ngôn ngữ lập trình chính.
+
+ * **OpenFlow 1.3**: Giao thức giao tiếp chuẩn giữa Ryu Controller và các switch ảo.
+
+ * **Matplotlib & Pandas**: Các thư viện Python dùng để xử lý, phân tích dữ liệu và trực quan hóa kết quả (vẽ biểu đồ).
+
+
 # ---
 #
 #
