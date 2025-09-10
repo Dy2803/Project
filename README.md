@@ -137,5 +137,5 @@
   
 * **Phản ứng nhanh**: Kết quả đánh giá granularity chứng minh FlowSense có thể cập nhật thông tin băng thông chỉ trong vài giây sau khi một luồng kết thúc, phù hợp cho các hệ thống giám sát gần thời gian thực.
    ![Thời gian ghi nhận đầy đủ byte](Pictures/granularity_left.png)
-   ![Tỷ lệ byte được ghi nhận sau 1s, 5s, 10s.](granularity_right.png)
+   ![Tỷ lệ byte được ghi nhận sau 1s, 5s, 10s.](Pictures/granularity_right.png)
 
