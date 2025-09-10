@@ -11,8 +11,6 @@
  Dự án được xây dựng trên môi trường mô phỏng **Mininet** và sử dụng **Ryu Controller** để triển khai logic giám sát.
 
 
-# ---
-
  ## 2. Công nghệ sử dụng 🛠️
 
  Dự án sử dụng các công nghệ chính sau:
@@ -27,25 +25,29 @@
 
  * **Matplotlib & Pandas**: Các thư viện Python dùng để xử lý, phân tích dữ liệu và trực quan hóa kết quả (vẽ biểu đồ).
 
+ ## 3. Cấu trúc thư mục 📂
 
-# ---
-#
-#
-# ## 3. Cấu trúc thư mục 📂
-#
-# Dự án được tổ chức gọn gàng để dễ dàng truy cập và thực thi. Dưới đây là mô tả chi tiết các file chính:
-#
-# * `TOPOLOGY.py`: Định nghĩa mô hình mạng để đánh giá độ chính xác (Accuracy).
-# * `GranularityTopo.py`: Định nghĩa mô hình mạng để đánh giá độ chi tiết (Granularity).
-# * `FlowSense_CollectLogs.py`: Code **Ryu Controller** hiện thực thuật toán FlowSense.
-# * `Polling_CollectLogs.py`: Code **Ryu Controller** hiện thực phương pháp giám sát Polling.
-# * `FLOWSENSE(Algorithm1).py`: Script phân tích dữ liệu từ FlowSense và vẽ biểu đồ.
-# * `Draw_Polling_CollectLogs.py`: Script phân tích dữ liệu từ Polling và vẽ biểu đồ.
-# * `Comparison.py`: Script so sánh kết quả của FlowSense và Polling trên cùng một biểu đồ.
-# * `granularity_left.py` & `granularity_right.py`: Các script dùng để phân tích và vẽ biểu đồ đánh giá độ chi tiết.
-# * `PostProcessed.py`: Script xử lý dữ liệu bổ sung cho FlowSense.
-#
-#
+ Dự án được tổ chức gọn gàng để dễ dàng truy cập và thực thi. Dưới đây là mô tả chi tiết các file chính:
+
+ * `TOPOLOGY.py`: Định nghĩa mô hình mạng để đánh giá độ chính xác (Accuracy).
+
+ * `GranularityTopo.py`: Định nghĩa mô hình mạng để đánh giá độ chi tiết (Granularity).
+
+ * `FlowSense_CollectLogs.py`: Code **Ryu Controller** hiện thực thuật toán FlowSense.
+
+ * `Polling_CollectLogs.py`: Code **Ryu Controller** hiện thực phương pháp giám sát Polling.
+
+ * `FLOWSENSE(Algorithm1).py`: Script phân tích dữ liệu từ FlowSense và vẽ biểu đồ.
+
+ * `Draw_Polling_CollectLogs.py`: Script phân tích dữ liệu từ Polling và vẽ biểu đồ.
+
+ * `Comparison.py`: Script so sánh kết quả của FlowSense và Polling trên cùng một biểu đồ.
+
+ * `granularity_left.py` & `granularity_right.py`: Các script dùng để phân tích và vẽ biểu đồ đánh giá độ chi tiết.
+
+ * `PostProcessed.py`: Script xử lý dữ liệu bổ sung cho FlowSense.
+
+
 # ---
 #
 #
