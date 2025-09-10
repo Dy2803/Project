@@ -21,7 +21,6 @@ Dự án này sử dụng công cụ mô phỏng mạng **Mininet** và nền t�
 
 **1.3 Tổ chức các script như sau**
 
-.
 ├── FlowSense_CollectLogs.py   # Code Ryu Controller cho FlowSense
 
 ├── Polling_CollectLogs.py     # Code Ryu Controller cho Polling
