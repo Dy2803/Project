@@ -8,7 +8,7 @@
 
  Thay vì dựa vào các phương pháp giám sát chủ động như **Polling**, FlowSense tận dụng các thông điệp có sẵn trong mạng như `PacketIn` và `FlowRemoved`. Điều này cho phép hệ thống thu thập thông tin lưu lượng mà **không tạo ra overhead** cho luồng điều khiển.
 
- Dự án được xây dựng trên môi trường mô phỏng **Mininet** và sử dụng **Ryu Controller** để triển khai logic giám sát.
+ Đồ án được xây dựng trên môi trường mô phỏng **Mininet** và sử dụng **Ryu Controller** để triển khai logic giám sát.
 
 
  ## 2. Công nghệ sử dụng 🛠️
