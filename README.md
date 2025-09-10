@@ -53,97 +53,86 @@
 
 ### Bước 1: Cài đặt các thư viện cần thiết
 
-# Mở Terminal và chạy lệnh sau để cài đặt các thư viện Python:
+ Mở Terminal và chạy lệnh sau để cài đặt các thư viện Python:
 
-# ```bash
-# pip install ryu pandas matplotlib
-# ```
-#
-# ### Bước 2: Chạy kịch bản đánh giá độ chính xác (Accuracy)
-#
-# Thực hiện theo các bước sau để chạy cả hai phương pháp và so sánh kết quả.
-#
-# 1.  **Chạy Polling**:
-#     * Mở Terminal thứ nhất và chạy Ryu Controller ở chế độ Polling:
-#         ```bash
-#         ryu-manager Polling_CollectLogs.py
-#         ```
-#     * Mở Terminal thứ hai và chạy mô hình mạng với Mininet:
-#         ```bash
-#         sudo python TOPOLOGY.py
-#         ```
-#     * Sau khi mô phỏng hoàn tất, file `polling_raw.csv` sẽ được tạo. Chạy script phân tích để tạo file `polling_analyzed.csv`:
-#         ```bash
-#         python Draw_Polling_CollectLogs.py
-#         ```
-#
-# 2.  **Chạy FlowSense**:
-#     * Đóng Mininet và Ryu ở bước trên.
-#     * Mở Terminal thứ nhất và chạy Ryu Controller ở chế độ FlowSense:
-#         ```bash
-#         ryu-manager FlowSense_CollectLogs.py
-#         ```
-#     * Mở Terminal thứ hai và chạy lại mô hình mạng:
-#         ```bash
-#         sudo python TOPOLOGY.py
-#         ```
-#     * Sau khi mô phỏng hoàn tất, file `flowsense_events.csv` sẽ được tạo. Chạy script phân tích để tạo file `a1_algorithm1_correct_final.csv`:
-#         ```bash
-#         python "FLOWSENSE(Algorithm1).py"
-#         ```
-#
-# 3.  **So sánh kết quả**:
-#     * Chạy script so sánh để tạo biểu đồ tổng hợp:
-#         ```bash
-#         python Comparison.py
-#         ```
-#     * Một cửa sổ đồ thị sẽ hiển thị, so sánh mức sử dụng băng thông giữa hai phương pháp.
-#
-# ### Bước 3: Chạy kịch bản đánh giá độ chi tiết (Granularity)
-#
-# Kịch bản này được thiết kế để kiểm tra khả năng phản hồi của FlowSense với các luồng traffic phức tạp.
-#
-# 1.  Mở Terminal thứ nhất và chạy Ryu Controller:
-#     * **Lưu ý**: Trước khi chạy, hãy mở file `FlowSense_CollectLogs.py` và thay đổi tên file log thành `granularity_events.csv`.
-#     ```bash
-#     ryu-manager FlowSense_CollectLogs.py
-#     ```
-#
-# 2.  Mở Terminal thứ hai và chạy mô hình mạng `GranularityTopo`:
-#     ```bash
-#     sudo python GranularityTopo.py
-#     ```
-#
-# 3.  Sau khi mô phỏng hoàn tất, chạy các script phân tích sau để xem kết quả:
-#     * Để vẽ biểu đồ phân phối độ trễ:
-#         ```bash
-#         python granularity_left.py
-#         ```
-#     * Để vẽ biểu đồ tỷ lệ dữ liệu được báo cáo:
-#         ```bash
-#         python granularity_right.py
-#         ```
-#
-#
-# ---
-#
-#
-# ## 5. Kết quả và đánh giá 📈
-#
-# Dựa trên các kết quả mô phỏng, phương pháp **FlowSense** cho thấy hiệu quả vượt trội:
-#
-# * **Độ chính xác cao**: Biểu đồ so sánh cho thấy FlowSense tái tạo lại mức sử dụng băng thông của mạng một cách rất gần với phương pháp Polling.
-# * **Không tạo overhead**: FlowSense không cần gửi thêm các yêu cầu Polling, giúp giảm thiểu đáng kể lưu lượng điều khiển.
-# * **Phản ứng nhanh**: Kết quả đánh giá granularity chứng minh FlowSense có thể cập nhật thông tin băng thông chỉ trong vài giây sau khi một luồng kết thúc, phù hợp cho các hệ thống giám sát gần thời gian thực.
-#
-#
-# ---
-#
-#
-# ## 6. Liên hệ 📧
-#
-# Nếu bạn có bất kỳ câu hỏi nào về dự án, vui lòng liên hệ:
-#
-# * **Họ và tên**: Trương Đức Duy
-# * **Mã số sinh viên**: 21207148
-# * **Email**: duytruong21207148@gmail.com
+ ```bash
+ pip install ryu pandas matplotlib
+ ```
+ ### Bước 2: Chạy kịch bản đánh giá độ chính xác (Accuracy)
+
+ Thực hiện theo các bước sau để chạy cả hai phương pháp và so sánh kết quả.
+
+ 1.  **Chạy Polling**:
+     * Mở Terminal thứ nhất và chạy Ryu Controller ở chế độ Polling:
+         ```bash
+         ryu-manager Polling_CollectLogs.py
+         ```
+     * Mở Terminal thứ hai và chạy mô hình mạng với Mininet:
+         ```bash
+         sudo python TOPOLOGY.py
+         ```
+     * Sau khi mô phỏng hoàn tất, file `polling_raw.csv` sẽ được tạo. Chạy script phân tích để tạo file `polling_analyzed.csv`:
+         ```bash
+         python Draw_Polling_CollectLogs.py
+         ```
+
+ 2.  **Chạy FlowSense**:
+     * Đóng Mininet và Ryu ở bước trên.
+     * Mở Terminal thứ nhất và chạy Ryu Controller ở chế độ FlowSense:
+         ```bash
+         ryu-manager FlowSense_CollectLogs.py
+         ```
+     * Mở Terminal thứ hai và chạy lại mô hình mạng:
+         ```bash
+         sudo python TOPOLOGY.py
+         ```
+     * Sau khi mô phỏng hoàn tất, file `flowsense_events.csv` sẽ được tạo. Chạy script phân tích để tạo file `a1_algorithm1_correct_final.csv`:
+         ```bash
+         python "FLOWSENSE(Algorithm1).py"
+         ```
+
+ 3.  **So sánh kết quả**:
+     * Chạy script so sánh để tạo biểu đồ tổng hợp:
+         ```bash
+         python Comparison.py
+         ```
+     * Một cửa sổ đồ thị sẽ hiển thị, so sánh mức sử dụng băng thông giữa hai phương pháp.
+
+ ### Bước 3: Chạy kịch bản đánh giá độ chi tiết (Granularity)
+
+ Kịch bản này được thiết kế để kiểm tra khả năng phản hồi của FlowSense với các luồng traffic phức tạp.
+
+ 1.  Mở Terminal thứ nhất và chạy Ryu Controller:
+
+* **Lưu ý**: Trước khi chạy, hãy mở file `FlowSense_CollectLogs.py` và thay đổi tên file log thành `granularity_events.csv`.
+     ```bash
+     ryu-manager FlowSense_CollectLogs.py
+     ```
+
+ 2.  Mở Terminal thứ hai và chạy mô hình mạng `GranularityTopo`:
+     ```bash
+     sudo python GranularityTopo.py
+     ```
+
+ 3.  Sau khi mô phỏng hoàn tất, chạy các script phân tích sau để xem kết quả:
+     * Để vẽ biểu đồ phân phối độ trễ:
+         ```bash
+         python granularity_left.py
+         ```
+     * Để vẽ biểu đồ tỷ lệ dữ liệu được báo cáo:
+         ```bash
+         python granularity_right.py
+         ```
+
+
+
+ ## 5. Kết quả và đánh giá 📈
+
+ Dựa trên các kết quả mô phỏng, phương pháp **FlowSense** cho thấy hiệu quả vượt trội:
+
+* **Độ chính xác cao**: Biểu đồ so sánh cho thấy FlowSense tái tạo lại mức sử dụng băng thông của mạng một cách rất gần với phương pháp Polling.
+
+* **Không tạo overhead**: FlowSense không cần gửi thêm các yêu cầu Polling, giúp giảm thiểu đáng kể lưu lượng điều khiển.
+* **Phản ứng nhanh**: Kết quả đánh giá granularity chứng minh FlowSense có thể cập nhật thông tin băng thông chỉ trong vài giây sau khi một luồng kết thúc, phù hợp cho các hệ thống giám sát gần thời gian thực.
+
+
