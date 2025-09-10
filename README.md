@@ -18,3 +18,17 @@ Dự án này sử dụng công cụ mô phỏng mạng **Mininet** và nền t�
 **OpenFlow**: Giao thức giao tiếp giữa Ryu Controller và các switch ảo.
 
 **Matplotlib, Pandas**: Thư viện Python để xử lý dữ liệu và vẽ biểu đồ.
+
+**1.3 Tổ chức các script như sau**
+
+.
+├── FlowSense_CollectLogs.py   # Code Ryu Controller cho FlowSense
+├── Polling_CollectLogs.py     # Code Ryu Controller cho Polling
+├── TOPOLOGY.py                # Mô hình mạng để đánh giá độ chính xác
+├── GranularityTopo.py         # Mô hình mạng để đánh giá độ chi tiết (granularity)
+├── FLOWSENSE(Algorithm1).py   # Script phân tích log và vẽ biểu đồ FlowSense
+├── Draw_Polling_CollectLogs.py # Script phân tích log và vẽ biểu đồ Polling
+├── Comparison.py              # Script so sánh kết quả FlowSense và Polling
+├── PostProcessed.py           # Script xử lý sau cho FlowSense
+├── granularity_left.py        # Script vẽ biểu đồ Granularity (Độ trễ checkpoint)
+└── granularity_right.py       # Script vẽ biểu đồ Granularity (Tỷ lệ dữ liệu được ghi nhận theo thời gian kể từ checkpoint)
