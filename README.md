@@ -29,9 +29,9 @@
 
  Dự án được tổ chức gọn gàng để dễ dàng truy cập và thực thi. Dưới đây là mô tả chi tiết các file chính:
 
- * `TOPOLOGY.py`: Định nghĩa mô hình mạng để đánh giá độ chính xác (Accuracy).
+ * `TOPOLOGY.py`: Script mô hình mạng để đánh giá độ chính xác (Accuracy).
 
- * `GranularityTopo.py`: Định nghĩa mô hình mạng để đánh giá độ chi tiết (Granularity).
+ * `GranularityTopo.py`: Script mô hình mạng để đánh giá độ chi tiết (Granularity).
 
  * `FlowSense_CollectLogs.py`: Code **Ryu Controller** hiện thực thuật toán FlowSense.
 
