@@ -2,7 +2,7 @@
  # FlowSense: Hệ thống giám sát mạng thụ động dựa trên thông tin điều khiển trong SDN
 
 
- ## 1. Giới thiệu dự án 💡
+ ## 1. Giới thiệu đồ án 💡
 
  Đồ án này tập trung vào việc hiện thực và đánh giá **FlowSense** - một phương pháp giám sát mạng thụ động. Dự án giải quyết một thách thức quan trọng trong mạng lập trình phần mềm (SDN): làm thế nào để đo lường mức sử dụng băng thông một cách **chính xác** và **hiệu quả** mà không cần tốn thêm tài nguyên mạng.
 
@@ -47,18 +47,14 @@
 
  * `PostProcessed.py`: Script xử lý dữ liệu bổ sung cho FlowSense.
 
+ ## 4. Hướng dẫn cài đặt và chạy mã nguồn
 
-# ---
-#
-#
-# ## 4. Hướng dẫn cài đặt và chạy mã nguồn
-#
-# Bạn cần chuẩn bị một máy ảo **Ubuntu** (khuyến nghị phiên bản 20.04 LTS hoặc mới hơn) đã cài đặt Mininet.
-#
-# ### Bước 1: Cài đặt các thư viện cần thiết
-#
+  Máy ảo **Ubuntu** phiên bản 22.04 LTS đã cài đặt Mininet và Ryu controller.
+
+### Bước 1: Cài đặt các thư viện cần thiết
+
 # Mở Terminal và chạy lệnh sau để cài đặt các thư viện Python:
-#
+
 # ```bash
 # pip install ryu pandas matplotlib
 # ```
