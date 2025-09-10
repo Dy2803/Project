@@ -8,6 +8,7 @@
 Dự án này sử dụng công cụ mô phỏng mạng **Mininet** và nền tảng **Ryu Controller (viết bằng Python)** để hiện thực hóa và đánh giá thuật toán.
 
 **1.2 Các công nghệ được sử dụng** 
+
 **Mininet**: Công cụ mô phỏng mạng ảo.
 
 **Ryu Controller**: Framework SDN mã nguồn mở bằng Python.
