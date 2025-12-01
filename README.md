@@ -4,7 +4,7 @@
 
  ## 1. Giới thiệu đồ án 💡
 
- Đồ án này tập trung vào việc hiện thực và đánh giá **FlowSense** - một phương pháp giám sát mạng thụ động. Dự án giải quyết một thách thức quan trọng trong mạng lập trình phần mềm (SDN): làm thế nào để đo lường mức sử dụng băng thông một cách **chính xác** và **hiệu quả** mà không cần tốn thêm tài nguyên mạng.
+ Đồ án này tập trung vào việc hiện thực và đánh giá **FlowSense** - một phương pháp giám sát mạng thụ động. Đồ án giải quyết một thách thức quan trọng trong mạng lập trình phần mềm (SDN): làm thế nào để đo lường mức sử dụng băng thông một cách **chính xác** và **hiệu quả** mà không cần tốn thêm tài nguyên mạng.
 
  Thay vì dựa vào các phương pháp giám sát chủ động như **Polling**, FlowSense tận dụng các thông điệp có sẵn trong mạng như `PacketIn` và `FlowRemoved`. Điều này cho phép hệ thống thu thập thông tin lưu lượng mà **không tạo ra overhead** cho luồng điều khiển.
 
